@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +9,147 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  display: flex;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.current {
+  width: 65%;
+  padding: 2rem;
+  color: #fff;
+  background-color: #c7365f;
+  text-align: center;
+  border-radius: 9px;
+  opacity: 0.8;
+  transition: all 0.75s;
+}
+
+.current-label {
+  color: #ddd;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.dice {
+  position: absolute;
+  top: 16.5rem;
+  left: 50%;
+  transform: translate(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  background: none;
+  border: none;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #444;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  cursor: pointer;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.btn::first-letter {
+  display: inline-block;
+  margin-right: 0.7rem;
+  font-size: 2.4rem;
+}
+
+.btn--new {
+  top: 4rem;
+}
+
+.btn--roll {
+  top: 39.3rem;
+}
+
+.btn--hold {
+  top: 46.1rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
 }
